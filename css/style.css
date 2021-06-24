@@ -6,7 +6,7 @@
 
 .header{
     min-height: 100vh;
-    min-width: 100vh;
+    min-width: auto;
 
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../image/banner.png);  /* for the linear gradient */
     background-position: center;
@@ -43,7 +43,7 @@ nav .nav-links{
 .nav-links ul li a{
     text-decoration: none;
     color: white;
-    font-size: 1.1rem;
+    font-size: 13px;
 
 }
 
@@ -65,16 +65,13 @@ nav .nav-links{
 /* -----------text box-------------------- */
 
 .text-box {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 46px;
-    height: 531px;
     width: 90%;
     color: #fff;
     position: absolute;
-    justify-content: center;
-    align-items: center;
-    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
     font-family: 'Bree Serif', serif;
     
     
@@ -89,6 +86,7 @@ nav .nav-links{
 .text-box p{
     margin: 10px 0 40px;
     font-size: 16px;
+    color: white;
   
 }
 
@@ -102,7 +100,7 @@ nav .fa{
 
 @media(max-width: 700px){
     .text-box h1{
-        font-size: 2.3rem;
+        font-size: 20px;
         
     }
     .text-box p{
@@ -113,11 +111,11 @@ nav .fa{
     
     
     .nav-links ul li{
-        display: block;
-        
+        display: block; 
+        text-align: left; 
     
     }
-    nav .nav-links{
+    .nav-links{
         position: absolute;
         background: #f44336;
         height: 100vh;
@@ -193,7 +191,7 @@ nav .fa{
     
 }
 
-h3{
+.course-col h3{
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
@@ -211,9 +209,58 @@ h3{
     }
 }
 
+/* -----campus----- */
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
 
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+    transition: 0.5s;    
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+    transition: 0.5s;
+}
 
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    
 
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+   
+}
 
 
 
